@@ -7,3 +7,23 @@ aparel3
 https://www.figma.com/file/YZe8LR0c0Hm7cSYboc4TsB/Parsial?node-id=0%3A1
 
 dateline: 11, 13, 18, 20, 25, 27
+
+id
+image
+model
+nama
+harga
+qty
+diskon
+
+// insert data
+        $produk = new Produk;
+        $produk->nama = $request->nama;
+        $produk->model = $request->model;
+        $produk->harga = $request->harga;
+        $produk->quantity = $request->quantity;
+        $produk->diskon = $request->diskon;
+        $produk->files = $nama_file;
+        $produk->save();
+
+        return redirect('/produk');
